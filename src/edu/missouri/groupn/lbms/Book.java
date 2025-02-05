@@ -1,6 +1,11 @@
 package edu.missouri.groupn.lbms;
 
 public class Book {
+	/**
+	 * Default constructor:
+	 * This method initializes a new Book with default values.
+	 * Sets all strings to "Unknown" and price to 0.0.
+	 */
 	public Book() {
 		this.title = "Unknown";
 		this.author = "Uknown";
@@ -8,6 +13,14 @@ public class Book {
 		this.price = 0.0;
 	}
 	
+	/**
+	 * Parameterized constructor:
+	 * This method initializes a new Book with values given by the passed arguments.
+	 * @param title Title of the Book
+	 * @param author Author of the Book
+	 * @param ISBN ISBN of the Book
+	 * @param price Price of the Book
+	 */
 	public Book(String title, String author, String ISBN, double price) {
 		this.title = title;
 		this.author = author;
@@ -15,6 +28,11 @@ public class Book {
 		this.price = price;
 	}
 	
+	/**
+	 * Copy constructor:
+	 * This method initializes a Book copy with the passed Book object.
+	 * @param book Book to be copied
+	 */
 	public Book(Book book) {
 		this.title = book.getTitle();
 		this.author = book.getAuthor();
@@ -22,41 +40,73 @@ public class Book {
 		this.price = book.getPrice();
 	}
 	
+	/**
+	 * This method returns the title of the book.
+	 * @return Title of the book
+	 */
 	public String getTitle() {
 		return title;
 	}
 
+	/**
+	 * This method sets the title of the book.
+	 * @param title Title of book
+	 */
 	public void setTitle(String title) {
 		this.title = title;
 	}
 
+	/**
+	 * This method returns the author of the book.
+	 * @return Author of the book
+	 */
 	public String getAuthor() {
 		return author;
 	}
 
+	/**
+	 * This method sets the author of the book.
+	 * @param author Author of the book
+	 */
 	public void setAuthor(String author) {
 		this.author = author;
 	}
 
+	/**
+	 * This method returns the ISBN of the book.
+	 * @return ISBN of the book.
+	 */
 	public String getISBN() {
 		return ISBN;
 	}
 
-	public void setISBN(String iSBN) {
-		ISBN = iSBN;
+	/**
+	 * This method sets the ISBN of the book.
+	 * @param isbn ISBN of the book
+	 */
+	public void setISBN(String isbn) {
+		ISBN = isbn;
 	}
 
+	/**
+	 * This method returns the price of the book.
+	 * @return Price of the book
+	 */
 	public double getPrice() {
 		return price;
 	}
 
+	/**
+	 * This method sets the price of the book.
+	 * @param price Price of the book
+	 */
 	public void setPrice(double price) {
 		this.price = price;
 	}
 	
 	@Override
 	public String toString() {
-		return "";
+		return new String (this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")");
 	}
 	
 	@Override
