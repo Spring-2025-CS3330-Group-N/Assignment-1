@@ -104,11 +104,20 @@ public class Book {
 		this.price = price;
 	}
 	
+	/**
+	 * Returns a string representation of the object.
+	 * Formatted as "'title' by 'author' (ISBN: 'isbn', $'price')"
+	 * @return String representation of book
+	 */
 	@Override
 	public String toString() {
 		return new String (this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")");
 	}
 	
+	/**
+	 * Returns if the passed book equals the book the method is called upon by comparing ISBN strings.
+	 * @return Boolean True if the book ISBNs are equal and False if not
+	 */
 	@Override
 	public boolean equals(Object book) {
 		return (book instanceof Book) && this.ISBN.equals(((Book) book).getISBN());
