@@ -1,5 +1,9 @@
 package edu.missouri.groupn.lbms;
 
+/**
+ * This is a class that stores values representing a book to be stored in a library.
+ * It contains the title, author, ISBN, and price of the book.
+ */
 public class Book {
 	/**
 	 * Title of the book as a string
