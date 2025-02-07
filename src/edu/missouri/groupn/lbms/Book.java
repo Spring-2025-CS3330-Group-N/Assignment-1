@@ -2,6 +2,22 @@ package edu.missouri.groupn.lbms;
 
 public class Book {
 	/**
+	 * Title of the book as a string
+	 */
+	private String title;
+	/**
+	 * Author of the book as a string
+	 */
+	private String author;
+	/**
+	 * ISBN number of the book as a string
+	 */
+	private String ISBN;
+	/**
+	 * Price of the book as a double
+	 */
+	private double price;
+	/**
 	 * Default constructor:
 	 * This method initializes a new Book with default values.
 	 * Sets all strings to "Unknown" and price to 0.0.
@@ -122,9 +138,4 @@ public class Book {
 	public boolean equals(Object book) {
 		return (book instanceof Book) && this.ISBN.equals(((Book) book).getISBN());
 	}
-
-	private String title;
-	private String author;
-	private String ISBN;
-	private double price;
 }
