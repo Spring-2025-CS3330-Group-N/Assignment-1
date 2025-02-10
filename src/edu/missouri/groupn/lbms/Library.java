@@ -33,4 +33,13 @@ public class Library {
 		(this.count)++;
 		return true;
 	}
+	/**
+	 * searchByISBN:
+	 * This method searches for a book using the ISBN value passed in as a String argument
+	 * @param String ISBN value used to search for a specific book
+	 * @return Book object corresponding to the given ISBN if successful, null if unsuccessful
+	 */
+	public Book searchByISBN(String ISBN) {
+		// ...
+	}
 }
