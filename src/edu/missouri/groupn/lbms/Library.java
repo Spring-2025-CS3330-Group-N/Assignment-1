@@ -33,6 +33,17 @@ public class Library {
 		(this.count)++;
 		return true;
 	}
+	
+	/**
+	 * removeBook:
+	 * This method removes a book from the library using the value passed in as a Book argument (if it exists)
+	 * @param Book book object to be removed from the library
+	 * @return Boolean true upon successful book removal, false if book does not exist in library
+	 */
+	public boolean removeBook(Book book) {
+		// ...
+	}
+	
 	/**
 	 * searchByISBN:
 	 * This method searches for a book using the ISBN value passed in as a String argument
@@ -42,4 +53,5 @@ public class Library {
 	public Book searchByISBN(String ISBN) {
 		// ...
 	}
+	
 }
