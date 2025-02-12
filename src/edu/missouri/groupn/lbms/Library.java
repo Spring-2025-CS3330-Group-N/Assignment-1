@@ -26,11 +26,10 @@ public class Library {
 	 */
 	public boolean addBook(Book book) {
 		if (this.count >= 5) {
-			System.err.println("The library is full!");
 			return false;
 		}
 		this.books[count] = book;
-		(this.count)++;
+		this.count++;
 		return true;
 	}
 	
@@ -42,6 +41,7 @@ public class Library {
 	 */
 	public boolean removeBook(Book book) {
 		// ...
+		return false;
 	}
 	
 	/**
@@ -52,6 +52,7 @@ public class Library {
 	 */
 	public Book searchByISBN(String ISBN) {
 		// ...
+		return null;
 	}
 	
 	/**
