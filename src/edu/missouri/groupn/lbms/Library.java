@@ -54,4 +54,12 @@ public class Library {
 		// ...
 	}
 	
+	/**
+	 * displayBook:
+	 * This method prints details of all books in the library using toString()
+	 */
+	public void displayBooks() {
+		// ...
+	}
+	
 }
