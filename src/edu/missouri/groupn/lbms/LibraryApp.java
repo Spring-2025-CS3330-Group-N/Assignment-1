@@ -37,15 +37,15 @@ public class LibraryApp {
 			System.out.println("Removal was unsuccessful.");
 		}
 		System.out.println("");
+		System.out.println("All books in the library:");
+		library.displayBooks();
+		System.out.println("");
 		System.out.println("Removing book: " + book4);
 		if (library.removeBook(book4)) {
 			System.out.println("Removal was successful.");
 		} else {
 			System.out.println("Removal was unsuccessful.");
 		}
-		System.out.println("");
-		System.out.println("All books in the library:");
-		library.displayBooks();
 	}
 
 }
