@@ -77,9 +77,11 @@ public class Library {
 	 * This method prints details of all books in the library using toString()
 	 */
 	public void displayBooks() {
-		for (int i=0; i < ((this.count)); i++) {
+		int bookNumber = 1;
+		for (int i=0; i < 5; i++) {
 			if (this.books[i] != null) {
-				System.out.println(this.books[i].toString());
+				System.out.println(bookNumber + ". " + this.books[i].toString());
+				bookNumber++;
 			}
 		}
 	}
