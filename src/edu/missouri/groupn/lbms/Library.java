@@ -41,7 +41,20 @@ public class Library {
 	 * @return Boolean true upon successful book removal, false if book does not exist in library
 	 */
 	public boolean removeBook(Book book) {
-		// ...
+		for (int i=0; i < ((this.count) -1); i++) {
+			// null check
+			if (book == null) {
+				break;
+			}
+			// compare book argument to books in the library, delete if a match is found
+			if (this.books[i] == book) {
+				// System.out.println("Book found in library: " + books[i].toString());
+				this.books[i] = null;
+				this.count--;
+				// System.out.println("Book is successfully removed.");
+				return true;
+			}
+		}
 		return false;
 	}
 	
@@ -52,8 +65,8 @@ public class Library {
 	 * @return Book object corresponding to the given ISBN if successful, null if unsuccessful
 	 */
 	public Book searchByISBN(String ISBN) {
-		for (int i=0; i < ((this.count) -1); i++) {
-			if ((this.books[i].getISBN()).equalsIgnoreCase(ISBN)) {
+		for (int i=0; i < ((this.count)); i++) {
+			if ((this.books[i] != null) && (this.books[i].getISBN()).equalsIgnoreCase(ISBN)) {
 				return this.books[i];
 			}
 		}
@@ -65,7 +78,11 @@ public class Library {
 	 * This method prints details of all books in the library using toString()
 	 */
 	public void displayBooks() {
-		// ...
+		for (int i=0; i < ((this.count)); i++) {
+			if (this.books[i] != null) {
+				System.out.println(this.books[i].toString());
+			}
+		}
 	}
 	
 }
