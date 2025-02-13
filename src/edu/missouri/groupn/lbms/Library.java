@@ -24,6 +24,7 @@ public class Library {
 	 * @param book Book object to be added to library.
 	 * @return Boolean true or false depending on if it is successful (true) or not (false).
 	 */
+	
 	public boolean addBook(Book book) {
 		if (this.count >= 5) {
 			return false;
@@ -51,7 +52,11 @@ public class Library {
 	 * @return Book object corresponding to the given ISBN if successful, null if unsuccessful
 	 */
 	public Book searchByISBN(String ISBN) {
-		// ...
+		for (int i=0; i < ((this.count) -1); i++) {
+			if ((this.books[i].getISBN()).equalsIgnoreCase(ISBN)) {
+				return this.books[i];
+			}
+		}
 		return null;
 	}
 	
