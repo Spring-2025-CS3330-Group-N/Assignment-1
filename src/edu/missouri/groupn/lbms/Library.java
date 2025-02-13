@@ -50,6 +50,7 @@ public class Library {
 				continue;
 			} else if (this.books[i].equals(book)) {
 				this.books[i] = null;
+				this.count--;
 				return true;
 			}
 		}
