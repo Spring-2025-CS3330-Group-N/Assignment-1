@@ -24,14 +24,18 @@ public class Library {
 	 * @param book Book object to be added to library.
 	 * @return Boolean true or false depending on if it is successful (true) or not (false).
 	 */
-	
 	public boolean addBook(Book book) {
 		if (this.count >= 5) {
 			return false;
 		}
-		this.books[count] = book;
-		this.count++;
-		return true;
+		for (int i = 0; i < 5; i++) {
+			if (this.books[i] == null) {
+				this.books[i] = book;
+				this.count++;
+				return true;
+			}
+		}
+		return false;
 	}
 	
 	/**
@@ -41,7 +45,7 @@ public class Library {
 	 * @return Boolean true upon successful book removal, false if book does not exist in library
 	 */
 	public boolean removeBook(Book book) {
-		for (int i = 0; i < this.count; i++) {
+		for (int i = 0; i < 5; i++) {
 			if (this.books[i] == null) {
 				continue;
 			} else if (this.books[i].equals(book)) {
