@@ -41,7 +41,14 @@ public class Library {
 	 * @return Boolean true upon successful book removal, false if book does not exist in library
 	 */
 	public boolean removeBook(Book book) {
-		// ... 
+		for (int i = 0; i < this.count; i++) {
+			if (this.books[i] == null) {
+				continue;
+			} else if (this.books[i].equals(book)) {
+				this.books[i] = null;
+				return true;
+			}
+		}
 		return false;
 	}
 	
