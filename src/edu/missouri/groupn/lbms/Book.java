@@ -28,7 +28,7 @@ public class Book {
 	 */
 	public Book() {
 		this.title = "Unknown";
-		this.author = "Uknown";
+		this.author = "Unknown";
 		this.ISBN = "Unknown";
 		this.price = 0.0;
 	}
@@ -102,10 +102,10 @@ public class Book {
 
 	/**
 	 * This method sets the ISBN of the book.
-	 * @param isbn ISBN of the book
+	 * @param ISBN ISBN of the book
 	 */
-	public void setISBN(String isbn) {
-		ISBN = isbn;
+	public void setISBN(String ISBN) {
+		this.ISBN = ISBN;
 	}
 
 	/**
@@ -131,7 +131,7 @@ public class Book {
 	 */
 	@Override
 	public String toString() {
-		return new String (this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")");
+		return (this.title + " by " + this.author + " (ISBN: " + this.ISBN + ", $" + this.price + ")");
 	}
 	
 	/**
